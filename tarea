@@ -1,0 +1,543 @@
+# NOMBRE = ADAN ALI ESCANDON ROCA
+# CURSO = SOFTWARE C1-NOCTURNA
+
+# 1. Crea una lista de números enteros y calcula su suma.
+def exercise1():
+    plus = 0
+    num = 0
+    list = []
+    while True:
+        x = int(input("ingresa 1 si quiere ingresar un numero o 2 para terminar = "))
+        if x == 1:
+            num = int(input("ingresa un numero = "))
+            list.append(num)
+            plus = plus + num
+        elif x == 2:
+            print("lista = ", list)
+            print("la suma de todos los numeros de la lista = ", plus)
+            break
+        elif x !=1 and 2:
+            print("ingrese lo pedido")
+
+
+# 2. Encuentra el número más grande en una lista de números.
+def exercise2():
+    list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    print("lista = ", list)
+    print("el numero mas grande de la lista = ", max(list))
+
+
+# 3. Encuentra el número más pequeño en una lista de números.
+def exercise3():
+    list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    print("lista = ", list)
+    print("el numero mas grande de la lista = ", min(list))
+
+
+# 4. Elimina los elementos duplicados de una lista.
+def exercise4():
+    list = [1, 2, 2, 3, 3, 3, 4, 5, 6, 6, 6, 7, 7, 8]
+    print(list)
+    print("lista sin elementos duplicados = ", set(list))
+
+
+# 5. Dada una lista, invierte su orden.
+def exercise5():
+    list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    print(list)
+    print("lista invertida = ", list[::-1])
+
+
+# 6. Escribe un programa que cuente cuántas veces aparece un elemento en una lista.
+def exercise6():
+    list = [1, 2, 2, 3, 3, 3, 4, 5, 6, 6, 6, 7, 7, 8]
+    print("lista = ", list)
+    x = int(input("ingrese el numero para contar = "))
+    print("el numero aparece = ", list.count(x), "veces")
+
+
+# 7. Crea una lista de números pares del 1 al 20.
+def exercise7():
+    list = []
+    for x in range(1, 21):
+        if x % 2 == 0:
+            list.append(x)
+    print("los numeros pares son = ", list)
+
+
+# 8. Dada una lista de nombres, ordénalos alfabéticamente.
+def exercise8():
+    list = ["adan", "ali", "alan", "isaac", "naomi", "marcela", "domenica", "sharick", "carlos", "daniel"]
+    print("lista de nombres = ", list)
+    print("la lista ordenada alfabeticamente = ", sorted(list))
+
+
+# 9. Crea una lista de los cuadrados de los números del 1 al 10.
+def exercise9():
+    list = []
+    for x in range(1, 11):
+        cuad = x ** 2
+        list.append(cuad)
+    print("lista del 1 al 10 elevada al cuadrado = ", list)
+
+
+# 10. Dada una lista de números, encuentra el segundo número más grande.
+def exercise10():
+    list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    print("lista = ", list)
+    x = max(list)
+    list.remove(x)
+    x = max(list)
+    print("el segundo numero mas grande es = ", x)
+
+
+# 11. Crea un diccionario con nombres de personas como claves y sus edades como valores.
+def exercise11():
+    diccionary = {}
+    while True:
+        print("*****NOMBRE Y EDAD*****")
+        x = int(input("ingrese 1 si quiere llenar los datos que se le piden o 2 si quiere salir = "))
+        if x == 1:
+            clave = input("ingrese un nombre = ")
+            valor = int(input("ingrese su edad = "))
+            diccionary[clave] = valor
+        elif x == 2:
+            print(diccionary)
+            break
+        elif x != 1 and 2:
+            print("ingrese lo pedido")
+
+
+# 12. Agrega un nuevo elemento a un diccionario.
+def exercise12():
+    print("*****PROGRAMA ADAN*****")
+    diccionary = {"nombre": "adan", "apellido": "escandon"}
+    while True:
+        x = int(input("ingrese 1 si quiere ingresar un nuevo elemento o 2 para salir del programa = "))
+        if x == 1:
+            clave = input("ingrese su elemento = ")
+            valor = input("ingrese su valor = ")
+            diccionary[clave] = valor
+        elif x == 2:
+            print(diccionary)
+            break
+        elif x != 1 and 2:
+            print("ingrese bien lo pedido")
+
+
+# 13. Elimina un elemento de un diccionario por clave.
+def exercise13():
+    diccionary = {"nombre": "adan", "apellido": "escandon", "edad": "20", "fruta": "fresa", "pais": "ecuador"}
+    print(diccionary)
+    while True:
+        x = int(input("ingrese 1 si quiere eliminar un elemento de la lista o 2 para salir del programa = "))
+        if x == 1:
+            clave = input("ingrese la clave para eliminar el elemento = ")
+            if clave in diccionary:
+                del diccionary[clave]
+        elif x == 2:
+            print(diccionary)
+            break
+        elif x != 1 and 2:
+            print("ingrese lo pedido")
+
+
+# 14. Itera a través de las claves de un diccionario e imprime sus valores.
+def exercise14():
+    diccionary = {"nombre": "adan", "apellido": "escandon", "edad": "20", "fruta": "fresa", "pais": "ecuador"}
+    for clave, valor in diccionary.items():
+        print(valor)
+
+
+# 15. Verifica si una clave existe en un diccionario.
+def exercise15():
+    diccionary = {"nombre": "adan", "apellido": "escandon", "edad": "20", "fruta": "fresa", "pais": "ecuador"}
+    x = input("ingresa un elemento para verificar si existe = ")
+    if x in diccionary:
+        print(f"la clave {x} si existe en el diccionario")
+        print(diccionary)
+    else:
+        print(f"{x} no existe en el diccionario")
+
+
+# 16. Dada una lista de diccionarios (personas), encuentra la persona más joven.
+def exercise16():
+    young = float("inf")
+    personas = {"adan": 20, "alan": 19, "naomi": 17, "domenica": 18, "carlos": 18}
+    for clave, valortemporal in personas.items():
+        if valortemporal < young:
+            young = valortemporal
+            nombre = clave
+    print(f"la persona mas joven es {nombre} con {young} años")
+
+
+# 17. Dada una lista de diccionarios (libros), busca un libro por título.
+def exercise17():
+    libros = {"la nueva herramienta": "matematicas", "descubrimiento": "ciencias naturales",
+              "socialismo": "estudios sociales", "la naturaleza": "biologia"}
+    print(libros)
+    while True:
+        num = int(input("ingrese 1 si quiere buscar un libro o 2 para salir del programa = "))
+        if num == 1:
+            x = input("ingresa un elemento para verificar si existe = ")
+            if x in libros:
+                print(f" el libro del titulo {x} es {libros[x]}")
+                print(libros)
+            else:
+                print(f"el libro con el titulo {x} no existe")
+        elif num == 2:
+            break
+        else:
+            print("ingrese lo pedido")
+
+
+# 18. Crea un diccionario que cuente cuántas veces aparece cada palabra en una cadena de texto.
+def exercise18():
+    diccionary = {}
+    text = "hola esto es un texto y digo hola hola aunque sea un texto pero sera un texto"
+    word = text.split()
+    for x in word:
+        if x in diccionary:
+            diccionary[x] += 1
+        else:
+            diccionary[x] = 1
+    for x, cont in diccionary.items():
+        print(f"{x}:{cont}")
+
+
+# 19. Dado un diccionario de productos y sus precios, calcula el precio total de una lista de compras.
+def exercise19():
+    preciototal = 0
+    diccionary = {"tomate": 0.25, "cebolla": 0.30, "pimiento": 0.15, "perejil": 0.10, "arroz": 0.75, "mandarina": 0.25,
+                  "fresa": 0.15, "coco": 1.00, "naranja": 0.25}
+    while True:
+        num = int(input("ingrese 1 si quiere utilizar el programa o 2 para salir = "))
+        if num == 1:
+            producto = input("que producto desea comprar = ")
+            if producto in diccionary:
+                x = int(input("cuantos va a comprar = "))
+                preciodelproducto = diccionary[producto]
+                preciodelacompra = preciodelproducto * x
+                preciototal = preciodelacompra + preciototal
+            else:
+                print("el producto no existe en la tienda")
+        elif num == 2:
+            print(preciototal)
+            break
+        elif num != 1 and 2:
+            print("ingrese lo pedido")
+
+
+# 20. Combina dos diccionarios en uno solo
+def exercise20():
+    diccionary = {"nombre": "adan", "apellido": "escandon"}
+    diccionary2 = {"nombres": "amy", "apellidos": "roca"}
+    diccionary.update(diccionary2)
+    print(diccionary)
+
+
+# 21. Usa un bucle while para contar del 1 al 10
+def exercise21():
+    num = 1
+    while num <= 10:
+        print(num)
+        num = num + 1
+
+
+# 22. Usa un bucle for para imprimir los números pares del 1 al 20
+def exercise22():
+    for x in range(1, 21):
+        if x % 2 == 0:
+            print(x)
+
+
+# 23. Escribe un programa que imprima los elementos de una lista utilizando un bucle for
+def exercise23():
+    list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    for x in list:
+        print(x)
+
+
+# 24. Usa un bucle while para sumar los números del 1 al 100.
+def exercise24():
+    num = 1
+    plus = 0
+    while num <= 100:
+        plus = num + plus
+        num = num + 1
+    print(plus)
+
+
+# 25. Escribe un programa que cuente cuántas veces aparece una letra en una cadena de texto utilizando un bucle for
+def exercise25():
+    cont = 0
+    texto = "hola que tal yo me llamo hola y tu te llamas como yo me llamo jaja hola que tal"
+    print(texto)
+    letra = input("ingrese la letra que quiere buscar = ")
+    for x in texto:
+        if x in letra:
+            cont = cont + 1
+    print(f"la letra {x} aparece {cont} veces")
+
+
+# 26. Utiliza un bucle for para imprimir los números del 10 al 1 en orden decreciente.
+def exercise26():
+    for x in range(10, 0, -1):
+        print(x)
+
+
+# 27. Escribe un programa que imprima los números impares del 1 al 30 usando un bucle for.
+def exercise27():
+    for x in range(1, 31):
+        if x % 3 == 0:
+            print(x)
+
+
+# 28. Usa un bucle while para encontrar el primer número divisible por 7 y 11
+def exercise28():
+    num = 1
+    while True:
+        if num % 7 == 0 and num % 11 == 0:
+            break
+        num = num + 1
+    print(f"el numero divisile para 7 y 11 es {num}")
+
+
+# 29. Escribe un programa que genere los primeros 10 números de la secuencia Fibonacci.
+def exercise29():
+    fibonacci = [1]
+    for x in range(1, 10):
+        num = fibonacci[x - 1] + fibonacci[x - 2]
+        fibonacci.append(num)
+    for cont in fibonacci:
+        print(cont)
+
+
+# 30. Utiliza un bucle for para imprimir los elementos de una lista en reversa.
+def exercise30():
+    list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    for x in reversed(list):
+        print(x)
+
+
+# 31. Escribe un programa que determine si un número es positivo, negativo o cero.
+def exercise31():
+    num = int(input("ingresa un numero para determinar si es positivo, negativo o cero ="))
+    if num > 0:
+        print(f"el numero {num} es positivo ")
+    elif num < 0:
+        print(f"el numero {num} es negativo ")
+    elif num == 0:
+        print("es un cero")
+
+
+# 32. Dado un número, verifica si es par o impar.
+def exercise32():
+    num = 20
+    if num % 2 == 0:
+        print(f"el numero {num} es par")
+    else:
+        print(f"el numero {num} es impar ")
+
+
+# 33. Escribe un programa que determine si un año es bisiesto
+def exercise33():
+    año = int(input("ingrese un año = "))
+    if año % 4 == 0:
+        if año % 100 == 0:
+            if año % 400 == 0:
+                print("el año es bisiesto")
+            else:
+                print("el año no es bisiesto")
+        else:
+            print("el año es bisiesto")
+    else:
+        print("el año no es bisiesto")
+
+
+# 34. Dada la edad de una persona, clasifícala como niño, adolescente, adulto o anciano.
+def exercise34():
+    edad = 68
+    if edad <= 11:
+        print("usted es un niño")
+    elif edad <= 18:
+        print("usted es un adolescente")
+    elif edad <= 59:
+        print("usted es adulto")
+    elif edad >= 60:
+        print("usted es un anciano")
+
+
+# 35. Escribe un programa que determine si un triángulo es equilátero, isósceles o escaleno.
+def exercise35():
+    lado1 = int(input("ingrese la medida del lado = "))
+    lado2 = int(input("ingrese la medida del lado = "))
+    lado3 = int(input("ingrese la medida del lado = "))
+    if lado1 == lado2 and lado2 == lado3:
+        print("es un triangulo equilatero")
+    elif lado1 == lado2 or lado2 == lado3 or lado3 == lado1:
+        print("es un tirangulo isosceles")
+    else:
+        print("es un triangulo escaleno")
+
+
+# 36. Dado un número, verifica si es primo o no.
+def exercise36():
+    num = 5
+    cont = 0
+    for x in range(1, num + 1, 1):
+        if num % x == 0:
+            cont = cont + 1
+    if cont == 2:
+        print(f"el numero {num} es un primo ")
+    else:
+        print(f" el numero {num} no es un primo")
+
+
+# 37. Escribe un programa que clasifique a un estudiante según su calificación (A, B, C, D, F).
+def exercise37():
+    num = float(input("ingrese su clasificacion (0 a 10) = "))
+    if num < 10 and num > 9:
+        print("su clasificacion es de = A ")
+    elif num < 9 and num > 8:
+        print("su clasificacion es de = B ")
+    elif num < 8 and num > 7:
+        print("su clasificacion es de = C")
+    elif num < 7 and num > 6:
+        print("su clasificacion es de = D ")
+    elif num < 6:
+        print("su clasificacion es de = F")
+
+
+# 38. Dada una cadena de texto, verifica si es un palíndromo.
+def exercise38():
+    palabra = "anita lava la tina"
+    palabra = palabra.replace(" ", "")
+    palabraInvertida = palabra[::-1]
+    if palabra == palabraInvertida:
+        print("La paralabra es palindroma")
+    else:
+        print("La palabra no es palindroma")
+
+
+# 39. Escribe un programa que determine si un número es divisible por 3 y 5.
+def exercise39():
+    num = int(input("ingrese un numero = "))
+    if num % 3 == 0 and num % 5 == 0:
+        print(f"el numero {num} es divisible 3 y 5")
+    else:
+        print("no es divisible")
+
+
+# 40. Dado un número, verifica si es positivo y múltiplo de 4.
+def exercise40():
+    num = 20
+    if num > 0:
+        if num % 4 == 0:
+            print(f"el numero {num} es divisble para 4")
+        else:
+            print("el numero no es multiplo de 4")
+    else:
+        print("el numero es negativo")
+
+
+# 41. Crea una función que calcule el área de un triángulo.
+def areatriangulo(base, altura):
+    area = (base * altura) / 2
+    return area
+def exercise41():
+    base = float(input("ingrese la base del triangulo = "))
+    altura = float(input("ingrese la altura del triangulo = "))
+    areadeltriangulo = areatriangulo(base, altura)
+    print(areadeltriangulo)
+
+
+# 42. Escribe una función que devuelva la longitud de una lista.
+def longitud(lista):
+    return len(lista)
+def exercise42():
+    lista = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    longituddelaista = longitud(lista)
+    print(longituddelaista)
+
+
+# 43. Crea una función que convierta grados Celsius a Fahrenheit.
+def fahrenheit(celsius):
+    F = (celsius * 9 / 5) + 32
+    return F
+def exercise43():
+    celsius = float(input("ingresa los grados = "))
+    conversion = fahrenheit(celsius)
+    print(conversion)
+
+
+# 44. Escribe una función que genere una lista de números primos.
+def primos():
+    lista = []
+    for num in range(1, 11):
+        cont = 0
+        for x in range(1, num + 1, 1):
+            if num % x == 0:
+                cont = cont + 1
+        if cont == 2:
+            lista.append(x)
+    return lista
+def exercise44():
+    numerosprimos = primos()
+    print(numerosprimos)
+
+
+# 45. Crea una función que calcule el factorial de un número.
+def factorial(num):
+    fact = 1
+    for x in range(1, num + 1):
+        fact = fact * x
+    return fact
+def exercise45():
+    num = int(input("ingresa un numero = "))
+    numfactorial = factorial(num)
+    print(numfactorial)
+
+
+# 46. Escribe una función que verifique si una cadena de texto es un pangrama (contiene todas las letras del alfabeto).
+def pangrama(cadena):
+    import string
+    cadena = cadena.lower()
+    alfabeto = string.ascii_lowercase
+    for letra in alfabeto:
+        if letra not in cadena:
+            return False
+    return True
+def exercise46():
+    cadena = "lol"
+    if pangrama(cadena):
+        print("es un pangrama")
+    else:
+        print("no es un pangrama")
+
+
+# 47. Crea una función que devuelva el número de vocales en una cadena de texto.
+def vocales(texto):
+    texto = texto.lower()
+    cont = 0
+    for x in texto:
+        if x in ("aeiou"):
+            cont = cont + 1
+    return str(cont)
+def exercise47():
+    texto = "hola chavales me llamo adan y les digo hola"
+    cadenadetexto = vocales(texto)
+    print("la cantidad de vocales es ", cadenadetexto)
+
+
+# 48. Escribe una función que calcule el mínimo común múltiplo (MCM) de dos números.
+def MCM(num1, num2):
+    while num2:
+        num1, num2 = num2, num1 % num2
+        return num1
+        return (num1 * num2 // MCM(num1, num2))
+def exercise48():
+    num1 = int(input("ingrese un numero = "))
+    num2 = int(input("ingrese otro numero = "))
+    minimocomun = MCM(num1, num2)
+    print(minimocomun)
